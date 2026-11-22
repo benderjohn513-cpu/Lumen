@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add-on pack · Lumen</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.png">
+<style>
+  :root { --bg: #0b0c10; --bg2: #14161c; --text: #f2f3f5; --muted: #9aa0ab; --accent: #ff5a2b; --line: rgba(255,255,255,.08); }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font: 16px/1.55 Inter, "Segoe UI", system-ui, -apple-system, sans-serif; display: grid; place-items: center; padding: 24px; }
+  main { width: min(600px, 100%); background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .22em; font-size: 14px; text-decoration: none; color: inherit; margin-bottom: 18px; }
+  .logo i { width: 9px; height: 9px; background: var(--accent); transform: rotate(45deg); border-radius: 2px; }
+  small { color: var(--muted); letter-spacing: .06em; text-transform: uppercase; font-size: 11.5px; }
+  h1 { margin: 2px 0 10px; font-size: 28px; line-height: 1.15; }
+  p { color: var(--muted); margin: 0 0 14px; }
+  .warn { background: rgba(229,72,77,.14); border: 1px solid rgba(229,72,77,.55); color: #ffb4b0; border-radius: 10px; padding: 12px 14px; font-weight: 700; margin-bottom: 16px; }
+  ul { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; }
+  li { background: rgba(255,255,255,.04); border-radius: 10px; padding: 9px 12px; display: flex; justify-content: space-between; gap: 12px; }
+  li span { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  h2 { font-size: 15px; margin: 18px 0 8px; }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .btn { display: inline-flex; align-items: center; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer; font-size: 15px; font-family: inherit; }
+  .acc { background: var(--accent); color: #fff; } .ghost { background: rgba(255,255,255,.08); color: var(--text); }
+  .small { font-size: 13.5px; }
+  .err { color: #ff8a80; }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="./"><i></i>LUMEN</a>
+  <div id="out"><p>Opening the pack…</p></div>
+</main>
+<script>
+(async () => {
+  const out = document.getElementById('out');
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const d = location.hash.slice(1).trim();
+  try {
+    if (!/^[01][A-Za-z0-9_-]{16,}$/.test(d)) throw new Error('This link is missing its pack. Ask whoever shared it for the full link.');
+    let s = d.slice(1).replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '=';
+    let bytes = Uint8Array.from(atob(s), c => c.charCodeAt(0));
+    if (d[0] === '1') bytes = new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
+    const p = JSON.parse(new TextDecoder().decode(bytes));
+    if (p.lumenPack !== 1 || !Array.isArray(p.addons)) throw new Error('This isn’t a Lumen add-on pack.');
+    const tag = e => e.svc ? 'Set up for you with your Real-Debrid' : e.need?.length ? 'Uses your Real-Debrid' : e.p2p ? 'Free · torrents' : e.sports ? 'Sports' : 'Free';
+    out.innerHTML = `<small>Add-on pack${p.by ? ' · by ' + esc(p.by) : ''}</small><h1>${esc(p.name || 'Add-on pack')}</h1>
+      ${p.about ? `<p>${esc(p.about)}</p>` : ''}${p.warn ? `<div class="warn">⚠ ${esc(p.warn)}</div>` : ''}
+      <h2>${p.addons.length} add-ons</h2><ul>${p.addons.map(e => `<li>${esc(e.n)}<span>${tag(e)}</span></li>`).join('')}</ul>
+      ${p.setup?.length ? `<h2>Set up with your own account</h2><ul>${p.setup.map(x => `<li>${esc(x.n)}<span>after installing</span></li>`).join('')}</ul>` : ''}
+      ${p.needs?.includes('realdebrid') ? '<p class="small">Lumen asks for your own Real-Debrid key when you install. It goes into your add-ons on your device and nowhere else.</p>' : ''}
+      <div class="btns"><a class="btn acc" href="lumen://pack/${d}">Open in Lumen</a><button class="btn ghost" id="copy">Copy link</button><a class="btn ghost" href="packs.html">More packs</a><a class="btn ghost" href="./#download">Get Lumen</a></div>
+      <p class="small" style="margin-top:14px">Nothing happens when you click Open? Copy the link and paste it into Lumen under <b>Add-ons → Packs</b>. Lumen doesn't make, host or check third-party add-ons — only install packs you trust.</p>`;
+    document.getElementById('copy').onclick = async e => { try { await navigator.clipboard.writeText(location.href); e.target.textContent = 'Copied'; } catch { prompt('Copy this link:', location.href); } };
+  } catch (e) { out.innerHTML = `<h1>Hmm.</h1><p class="err">${esc(e.message)}</p><div class="btns"><a class="btn ghost" href="./">Lumen home</a></div>`; }
+})();
+</script>
+</body>
+</html>

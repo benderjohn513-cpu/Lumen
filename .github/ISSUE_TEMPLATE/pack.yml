@@ -1,0 +1,35 @@
+name: Share an add-on pack
+description: Put your Lumen add-on pack in the community gallery
+title: "Pack: "
+labels: ["pack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Make your pack in Lumen under **Add-ons → Packs → Share your add-ons** and press **Upload to the pack gallery**: this form fills itself in.
+        Lumen leaves your keys and accounts out of every pack. Once a maintainer approves it, it shows up in the gallery and inside Lumen.
+  - type: input
+    id: name
+    attributes: { label: Pack name }
+    validations: { required: true }
+  - type: input
+    id: by
+    attributes: { label: Your name or alias, description: Optional }
+  - type: textarea
+    id: about
+    attributes: { label: What it's for, description: "One or two lines, e.g. anime-heavy, best quality, free only" }
+  - type: dropdown
+    id: kind
+    attributes: { label: Needs, options: ["Real-Debrid", "Free (no Real-Debrid)"] }
+    validations: { required: true }
+  - type: textarea
+    id: link
+    attributes: { label: Pack link, description: "Starts with https://…/pack# or lumen://pack/", render: text }
+    validations: { required: true }
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: Before you post
+      options:
+        - label: The add-ons in this pack are ones I'm allowed to share, and I made the link with Lumen's Share button (so my keys are left out).
+          required: true

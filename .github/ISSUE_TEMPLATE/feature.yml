@@ -1,0 +1,10 @@
+name: Idea for Lumen
+description: Something you'd like Lumen to do
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: What you're trying to do, and how you'd like it to work.
+    validations: { required: true }

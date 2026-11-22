@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add-on packs · Lumen</title>
+<link rel="icon" href="img/favicon.png">
+<style>
+  :root { --bg: #0b0c10; --bg2: #14161c; --text: #f2f3f5; --muted: #9aa0ab; --accent: #ff5a2b; --line: rgba(255,255,255,.08); }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font: 16px/1.55 Inter, "Segoe UI", system-ui, -apple-system, sans-serif; display: grid; place-items: center; padding: 24px; }
+  main { width: min(600px, 100%); background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .22em; font-size: 14px; text-decoration: none; color: inherit; margin-bottom: 18px; }
+  .logo i { width: 9px; height: 9px; background: var(--accent); transform: rotate(45deg); border-radius: 2px; }
+  small { color: var(--muted); letter-spacing: .06em; text-transform: uppercase; font-size: 11.5px; }
+  h1 { margin: 2px 0 10px; font-size: 28px; line-height: 1.15; }
+  p { color: var(--muted); margin: 0 0 14px; }
+  .warn { background: rgba(229,72,77,.14); border: 1px solid rgba(229,72,77,.55); color: #ffb4b0; border-radius: 10px; padding: 12px 14px; font-weight: 700; margin-bottom: 16px; }
+  ul { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; }
+  li { background: rgba(255,255,255,.04); border-radius: 10px; padding: 9px 12px; display: flex; justify-content: space-between; gap: 12px; }
+  li span { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  h2 { font-size: 15px; margin: 18px 0 8px; }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .btn { display: inline-flex; align-items: center; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer; font-size: 15px; font-family: inherit; }
+  .acc { background: var(--accent); color: #fff; } .ghost { background: rgba(255,255,255,.08); color: var(--text); }
+  .small { font-size: 13.5px; }
+  .err { color: #ff8a80; }
+  main { width: min(760px, 100%); }
+  .pk { background: rgba(255,255,255,.04); border-radius: 12px; padding: 14px 16px; display: flex; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .pk.off { outline: 1px solid rgba(255,77,31,.5); } .tag.of { background: #ff4d1f; color: #fff; } .pk b { font-size: 16px; } .pk small { display: block; margin-top: 2px; } .pk p { margin: 6px 0 0; font-size: 14px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: rgba(255,255,255,.08); color: var(--muted); margin-left: 6px; vertical-align: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="./"><i></i>LUMEN</a>
+  <small>Community</small><h1>Add-on packs</h1>
+  <p>A pack installs a whole set of add-ons in one go. These were shared by Lumen users. Packs never carry anyone's keys: if one needs Real-Debrid, Lumen asks for yours when you install.</p>
+  <div class="btns" style="margin:0 0 22px"><a class="btn acc" href="#share" id="sh">Share your own pack</a><a class="btn ghost" href="./#download">Get Lumen</a></div>
+  <div id="list"><p>Loading…</p></div>
+  <h2 id="share">Share your own</h2>
+  <p class="small">In Lumen open <b>Add-ons → Packs → Share your add-ons</b> (on phones: <b>More → Add-ons → Share your add-ons</b>), make your pack and press <b>Upload to the pack gallery</b>. It opens GitHub with everything filled in; post it and it appears here once it's approved. Lumen doesn't make, host or check third-party add-ons.</p>
+</main>
+<script>
+(async () => {
+  const el = document.getElementById('list');
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  try {
+    const ps = (await (await fetch('packs.json?t=' + Date.now())).json()).packs || [];
+    ps.sort((x, y) => (y.official ? 1 : 0) - (x.official ? 1 : 0));
+    el.innerHTML = ps.length ? ps.map(p => `<div class="pk${p.official ? ' off' : ''}"><div><b>${esc(p.name)}</b>${p.official ? '<span class="tag of">Official</span>' : ''}<span class="tag">${p.free ? 'Free' : 'Real-Debrid'}</span>
+      <small>${[p.by && 'by ' + esc(p.by), (p.count || 0) + ' add-ons'].filter(Boolean).join(' · ')}</small>${p.about ? `<p>${esc(p.about)}</p>` : ''}</div>
+      <a class="btn ghost" href="${esc(p.link)}">View</a></div>`).join('') : '<p>No packs yet. Be the first!</p>';
+  } catch { el.innerHTML = '<p class="err">Couldn’t load the packs.</p>'; }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+name: Something's broken
+description: Lumen crashed, a button doesn't work, or something looks wrong
+labels: [bug]
+body:
+  - type: dropdown
+    id: device
+    attributes:
+      label: Where?
+      options: [Windows, Android phone, Android TV / Google TV]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Lumen version
+      description: Settings → About (Windows) or More → About & legal (Android)
+      placeholder: e.g. 3.0.0
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did right before, what you expected, and what happened instead. Screenshots help a lot.
+    validations: { required: true }
+  - type: markdown
+    attributes:
+      value: "Please don't paste add-on links with your keys in them (Real-Debrid keys and similar). Just name the add-on."

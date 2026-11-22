@@ -1,0 +1,33 @@
+# Adds an approved pack to the gallery (docs/packs.json): label a "Pack:" issue with "approved-pack".
+name: Pack gallery
+on:
+  issues:
+    types: [labeled]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  add:
+    if: github.event.label.name == 'approved-pack'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - id: add
+        run: node .github/scripts/add-pack.js
+        env:
+          BODY: ${{ github.event.issue.body }}
+          ISSUE: ${{ github.event.issue.number }}
+      - if: steps.add.outcome == 'success'
+        run: |
+          git config user.name "lumen-bot"; git config user.email "lumen-bot@users.noreply.github.com"
+          git add docs/packs.json; git commit -m "Gallery: add pack from #${{ github.event.issue.number }}"; git push
+      - uses: actions/github-script@v7
+        if: always()
+        with:
+          script: |
+            const ok = '${{ steps.add.outcome }}' === 'success';
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number,
+              body: ok ? 'Added to the pack gallery. It shows up on the site and in Lumen in a few minutes. Thanks!' : 'This pack couldn’t be added (the link didn’t check out). See the workflow log.' });
+            if (ok) await github.rest.issues.update({ ...context.repo, issue_number: context.issue.number, state: 'closed' });

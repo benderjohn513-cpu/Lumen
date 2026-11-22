@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setup guide — Lumen</title>
+<meta name="description" content="Set up Lumen in a few minutes: what add-ons are, the starter pack, install links, Real-Debrid and bringing your add-ons from another app.">
+<meta name="theme-color" content="#0b0b0e">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+.g-hero{padding:150px 0 var(--s4)}
+.g-hero h1{font-size:clamp(42px,6vw,76px);letter-spacing:-.03em;line-height:.98;max-width:14ch}
+.g-hero .lead{margin-top:var(--s3)}
+.g{display:grid;grid-template-columns:220px 1fr;gap:var(--s5);padding-bottom:var(--s6)}
+.toc{position:sticky;top:96px;align-self:start;display:flex;flex-direction:column;gap:2px}
+.toc a{padding:8px 12px;border-radius:10px;color:var(--muted);font-size:15px;transition:color var(--fast),background var(--fast)}
+.toc a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.doc{max-width:720px}
+.doc section{padding:0 0 var(--s5);scroll-margin-top:96px}
+.doc h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:var(--s2)}
+.doc p,.doc li{color:#c3c3cd;font-size:17px}
+.doc p+p{margin-top:12px}
+.doc ol,.doc ul{padding-left:22px;margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.doc b{color:var(--text)}
+.doc a:not(.btn){color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,138,76,.6)}
+.doc code{font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.07);padding:2px 6px;border-radius:6px;color:#ffd0b8}
+.box{margin-top:var(--s3);padding:24px;border-radius:var(--r2);background:var(--card);border:1px solid var(--line)}
+.box.acc{border-color:rgba(255,77,31,.45);background:linear-gradient(180deg,rgba(255,77,31,.08),rgba(255,77,31,.02))}
+.box h3{font-size:20px;margin-bottom:8px}
+.box .btn{margin-top:16px}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.list div{padding:14px 16px;border-radius:12px;background:#0e0e12;border:1px solid var(--line)}
+.list b{display:block;font-size:15px}.list small{color:var(--muted);font-size:13.5px}
+.kbd{display:inline-block;padding:1px 7px;border-radius:6px;border:1px solid var(--line2);font-size:14px;color:var(--text)}
+@media(max-width:860px){.g{grid-template-columns:1fr}.toc{display:none}.list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav solid" id="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Lumen home"><i></i>LUMEN</a>
+    <nav aria-label="Main"><a href="index.html#watch">What you can watch</a><a href="index.html#story">Features</a><a href="guide.html" aria-current="page" style="color:var(--text)">Guide</a><a href="packs.html">Packs</a><a href="index.html#faq">FAQ</a><a href="https://github.com/benderjohn513-cpu/Lumen">GitHub</a></nav>
+    <a class="btn pri" href="index.html#download">Download</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap g-hero">
+    <span class="k">Setup guide</span>
+    <h1>From install to play in a few minutes.</h1>
+    <p class="lead">Lumen is the player. What you can watch comes from add-ons you choose. Here's how they work and the quickest way to set them up.</p>
+  </div>
+
+  <div class="wrap g">
+    <nav class="toc" aria-label="On this page">
+      <a href="#addons">What add-ons are</a><a href="#starter">1. The starter pack</a><a href="#streams">2. Add streaming add-ons</a><a href="#links">Install links</a><a href="#rd">Real-Debrid</a><a href="#bring">Bring your add-ons</a><a href="#tips">Tips</a>
+    </nav>
+
+    <div class="doc">
+      <section id="addons">
+        <h2>What add-ons are</h2>
+        <p>Add-ons are small web services made by other people. Lumen asks them what exists (catalogs, posters, episode lists), where something can be played (streams), and which subtitles are available.</p>
+        <p>Lumen uses the same add-on format as apps like Stremio, so <b>any guide or add-on made for those apps works in Lumen too</b>, usually with fewer steps.</p>
+        <div class="list">
+          <div><b>Catalogs and info</b><small>What's out there, posters, descriptions, episodes</small></div>
+          <div><b>Streams</b><small>Where a movie or episode can actually play</small></div>
+          <div><b>Subtitles</b><small>Subtitles in your language, loaded automatically</small></div>
+          <div><b>Extras</b><small>Lists, anime trackers, sports and more</small></div>
+        </div>
+      </section>
+
+      <section id="starter">
+        <h2>1. Start with the Lumen Starter pack</h2>
+        <p>A pack installs a set of add-ons in one click. The official starter pack gives you the basics everyone needs, all free:</p>
+        <div class="list">
+          <div><b>Cinemeta</b><small>Movie and show info and the main catalogs</small></div>
+          <div><b>The Movie Database</b><small>Posters, trending and more catalogs</small></div>
+          <div><b>Anime Kitsu</b><small>Anime catalogs, seasons and episodes</small></div>
+          <div><b>OpenSubtitles</b><small>Subtitles in dozens of languages</small></div>
+        </div>
+        <div class="box acc">
+          <h3>Lumen Starter</h3>
+          <p>Click it with Lumen installed and it opens right in the app. Or copy the link and paste it in <b>Add-ons → Packs</b>.</p>
+          <a class="btn pri" id="starterBtn" href="packs.html">Install the starter pack</a>
+        </div>
+      </section>
+
+      <section id="streams">
+        <h2>2. Add streaming add-ons</h2>
+        <p>The starter pack tells Lumen <i>what</i> exists. To actually play things you add one or more <b>stream add-ons</b>. Lumen doesn't pick these for you: choose ones you trust and have the right to use.</p>
+        <ol>
+          <li><b>Browse inside Lumen.</b> Open <b>Add-ons → Discover</b> for the official and community lists, with a short description of each.</li>
+          <li><b>Use a community pack.</b> The <a href="packs.html">pack gallery</a> has sets other Lumen users have shared. Their keys are always stripped out.</li>
+          <li><b>Follow any add-on guide.</b> Guides written for apps like Stremio work the same way here. When a guide says "click Install", see the next section.</li>
+        </ol>
+      </section>
+
+      <section id="links">
+        <h2>Install links open in Lumen</h2>
+        <p>Many add-on websites have a <b>Configure</b> page with an <b>Install</b> button. Lumen can catch those buttons:</p>
+        <ol>
+          <li>In Lumen, open <b>Settings</b> and turn on <b>Open add-on install links in Lumen</b>.</li>
+          <li>On the add-on's website, set it up and click <b>Install</b>.</li>
+          <li>Lumen opens and asks <b>"Install this add-on?"</b>, showing its name and what it adds. Click <b>Install</b>.</li>
+        </ol>
+        <p>Using another app with the same add-ons? Your computer lets only one app open these links, so leave the switch off if you'd rather that app gets them. You can always copy the link instead: right-click <b>Install</b> → <b>Copy link</b>, then paste it in <b>Add-ons → Paste an add-on link</b>.</p>
+      </section>
+
+      <section id="rd">
+        <h2>Real-Debrid (optional)</h2>
+        <p>Some stream add-ons work with a paid service like <a href="https://real-debrid.com">Real-Debrid</a> for faster, more reliable playback. Lumen doesn't need it, but if you have it:</p>
+        <ol>
+          <li>Copy your API key from your Real-Debrid account page.</li>
+          <li>In Lumen, open <b>Add-ons → Keys &amp; accounts</b> and paste it once.</li>
+          <li>Every add-on and pack that needs it uses that key. It stays on your device and never goes into packs you share.</li>
+        </ol>
+      </section>
+
+      <section id="bring">
+        <h2>Bring your add-ons from another app</h2>
+        <p>Already set up in another app that uses add-ons? On a PC, open <b>Add-ons → Bring them from another app</b>. Lumen copies your add-ons, library and Continue Watching, and changes nothing in the other app.</p>
+        <p>Moving between your own devices? Turn on sync in <b>Settings → Sync</b>. It uses your own Google Drive, so there's no Lumen account.</p>
+      </section>
+
+      <section id="tips">
+        <h2>Tips</h2>
+        <ul>
+          <li>Search anywhere with <span class="kbd">Ctrl</span> + <span class="kbd">K</span> on a PC.</li>
+          <li>Torrent-based sources need the free Stremio Service running on your PC or network. Point Lumen at it in <b>Settings → Playback → Streaming server</b>.</li>
+          <li>Turn on <b>Spoiler Shield</b> in Settings if you're catching up on something.</li>
+          <li>Share your setup with friends: <b>Add-ons → Packs → Share your add-ons</b>. Your keys are removed automatically.</li>
+        </ul>
+        <div class="box"><h3>Stuck?</h3><p>Open an issue on <a href="https://github.com/benderjohn513-cpu/Lumen/issues">GitHub</a> and say what device you're on and what you tried.</p></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><span class="logo" style="margin-bottom:14px"><i></i>LUMEN</span>Lumen is a player. It doesn't host, own, provide or link to any content and ships with no streaming add-ons installed. You're responsible for using add-ons and sources you have the right to use. Not affiliated with Stremio, Real-Debrid or any streaming service.</p>
+    <nav aria-label="Footer"><a href="index.html">Home</a><a href="packs.html">Add-on packs</a><a href="https://github.com/benderjohn513-cpu/Lumen/releases">Releases</a><a href="https://github.com/benderjohn513-cpu/Lumen">GitHub</a></nav>
+  </div>
+</footer>
+<script>
+fetch('packs.json').then(function (r) { return r.json(); }).then(function (j) {
+  var s = (j.packs || []).filter(function (p) { return p.official; })[0];
+  if (s) document.getElementById('starterBtn').href = s.link;
+}).catch(function () {});
+</script>
+</body>
+</html>
