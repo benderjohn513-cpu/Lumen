@@ -2,6 +2,14 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 22, 2026
+
+**New**
+- **Smart Search** — describe what you're in the mood for ("comfort anime", "korean revenge thriller", "90s sitcom", "shows like The Office") and Lumen finds it, free and with no AI key. Titles that match everything you asked for come first, then close matches, and each result says why it was picked. Recent searches are one tap away.
+- **Cleaner search** — each title once, with its movies and the canon prequel next to it, and everything else tucked under Extras. Nicknames work too ("jjk", "csm").
+- **Install links from add-on websites** — turn on *Open add-on install links in Lumen* in Settings, and the Install button on an add-on's website opens Lumen and asks before adding it.
+- **Lumen Starter pack** — the official beginner pack (catalogs and subtitles) is pinned at the top of the pack gallery.
+
 ## November 21, 2026 — Windows 3.0.0 · Android 1.3.0
 
 **New**
