@@ -20,13 +20,13 @@ Movies, shows, anime, live sports, manga and manhwa in one calm app, from the ad
 
 | Platform | Download | Notes |
 |---|---|---|
-| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/tag/windows-3.0.0) | Unzip and run `Lumen.exe`. mpv is built in. |
-| **Android phones** | [Lumen for Android 1.3.0](https://github.com/benderjohn513-cpu/Lumen/releases/tag/android-1.3.0) | `arm64` APK for most phones from the last 8 years. |
-| **Android TV / Google TV** | Same release as phones | `arm64` for most TVs. Older sticks (some Fire TV / Chromecast models) need the `armv7` APK. |
-| **Linux** (64-bit) | [Lumen for Linux 2.44.0](https://github.com/benderjohn513-cpu/Lumen/releases/tag/linux-2.44.0) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
-| **Mac** (beta) | [Lumen for Mac 2.44.0 beta](https://github.com/benderjohn513-cpu/Lumen/releases/tag/mac-2.44.0-beta) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
+| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.0.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Windows-3.0.0.zip) | Unzip and run `Lumen.exe`. mpv is built in. |
+| **Android phones** | [Lumen for Android 1.3.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Android-1.3.0-arm64.apk) | `arm64` APK for most phones from the last 8 years. |
+| **Android TV / Google TV** | Same app as phones | `arm64` for most TVs. Older sticks (some Fire TV / Chromecast models) need the `armv7` APK. |
+| **Linux** (64-bit) | [Lumen for Linux 2.44.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Linux-2.44.0-x64.tar.xz) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
+| **Mac** (beta) | [Lumen for Mac 2.44.0 beta](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Mac-beta-arm64.tar.xz) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
 
-Lumen checks GitHub once a day and tells you when a new version is out.
+Other versions (Android armv7, Linux ARM, Mac with Intel) are on the [download page](https://benderjohn513-cpu.github.io/Lumen/#download).
 
 ### First launch
 
@@ -98,7 +98,7 @@ Lumen isn't code-signed yet, so your device asks once before opening it:
 
 <details><summary><b>Does Lumen collect my data?</b></summary><br>No accounts, no analytics. Your history and settings stay on your device. Sync is optional and uses <i>your own</i> Google Drive. Lumen talks to the add-ons you install and to public info services (like AniList, Trakt or MangaUpdates) when you use those features.</details>
 
-<details><summary><b>Can I use my Stremio add-ons?</b></summary><br>Yes — on Windows, Lumen can pull your add-ons, library and Continue Watching straight from Stremio (nothing in Stremio is changed). You can also paste any add-on's <code>manifest.json</code> link.</details>
+<details><summary><b>Can I bring my add-ons from another app?</b></summary><br>Yes — on Windows, Lumen can pull your add-ons, library and Continue Watching straight from Stremio (nothing in Stremio is changed). You can also paste any add-on's <code>manifest.json</code> link.</details>
 
 <details><summary><b>Why does Windows or Android warn me when I install it?</b></summary><br>Lumen isn't code-signed (that costs money every year). The warning is the standard one for any unsigned app — see <a href="#first-launch">First launch</a>.</details>
 
