@@ -6,9 +6,9 @@
 
 **Knows where you are in every story, never spoils it, and gets you to the good part.**
 
-Movies, shows, anime, live sports, manga and manhwa in one calm app, from the add-ons you choose. Free, no ads, no account. For Windows, Android, Android TV, Linux and Mac.
+Movies, shows, anime, live sports, manga and manhwa in one app, from the add-ons you choose. Free, no ads, no account. For Windows, Android, Android TV, Linux and Mac.
 
-[**Download**](#download) · [**Website**](https://benderjohn513-cpu.github.io/Lumen/) · [**Setup guide**](https://benderjohn513-cpu.github.io/Lumen/guide.html) · [**Add-on packs**](#add-ons-and-add-on-packs) · [**Report a bug**](https://github.com/benderjohn513-cpu/Lumen/issues/new/choose)
+[**Download**](#download) · [**Discord**](https://discord.gg/8ntxZ8CMrb) · [**Website**](https://benderjohn513-cpu.github.io/Lumen/) · [**Setup guide**](https://benderjohn513-cpu.github.io/Lumen/guide.html) · [**Add-on packs**](#add-ons-and-add-on-packs) · [**Report a bug**](https://github.com/benderjohn513-cpu/Lumen/issues/new/choose)
 
 <img src="docs/img/hero.png" width="860" alt="Lumen: everything you watch, in one calm app">
 
@@ -20,20 +20,20 @@ Movies, shows, anime, live sports, manga and manhwa in one calm app, from the ad
 
 | Platform | Download | Notes |
 |---|---|---|
-| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.0.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Windows-3.0.0.zip) | Unzip and run `Lumen.exe`. mpv is built in. |
-| **Android phones** | [Lumen for Android 1.3.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Android-1.3.0-arm64.apk) | `arm64` APK for most phones from the last 8 years. |
+| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Windows-3.0.0.zip) | Unzip and run `Lumen.exe`. mpv is built in. |
+| **Android phones** | [Lumen for Android 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Android-3.0.0-arm64.apk) | `arm64` APK for most phones from the last 8 years. |
 | **Android TV / Google TV** | Same app as phones | `arm64` for most TVs. Older sticks (some Fire TV / Chromecast models) need the `armv7` APK. |
-| **Linux** (64-bit) | [Lumen for Linux 2.44.0](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Linux-2.44.0-x64.tar.xz) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
-| **Mac** (beta) | [Lumen for Mac 2.44.0 beta](https://benderjohn513-cpu.github.io/Lumen/download/Lumen-Mac-beta-arm64.tar.xz) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
+| **Linux** (64-bit) | [Lumen for Linux 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Linux-3.0.0-x64.tar.xz) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
+| **Mac** (beta) | [Lumen for Mac 3.0.0 beta](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Mac-3.0.0-beta-arm64.tar.xz) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
 
-Other versions (Android armv7, Linux ARM, Mac with Intel) are on the [download page](https://benderjohn513-cpu.github.io/Lumen/#download).
+Other versions (Android armv7, Linux ARM, Mac with Intel) are on the [Releases page](https://github.com/benderjohn513-cpu/Lumen/releases/latest).
 
 ### First launch
 
 Lumen isn't code-signed yet, so your device asks once before opening it:
 
 - **Windows:** if you see *"Windows protected your PC"*, click **More info → Run anyway**.
-- **Mac:** right-click `Lumen.app` → **Open**, then **Open** again. If it says the app *"is damaged"*, see `READ ME FIRST.txt` in the zip.
+- **Mac:** open it once; if macOS blocks it, go to **System Settings → Privacy & Security** and click **Open Anyway**. If it says the app *"is damaged"*, run `xattr -cr /Applications/Lumen.app` in Terminal.
 - **Linux:** nothing to approve. If it won't start, run `./lumen` in a terminal to see why.
 - **Android:** allow *"Install unknown apps"* for your browser or file manager when it asks, then open the APK.
 - **Android TV:** install with *Downloader* (or any file manager) and allow unknown apps for it.
@@ -102,7 +102,6 @@ Lumen isn't code-signed yet, so your device asks once before opening it:
 
 <details><summary><b>Why does Windows or Android warn me when I install it?</b></summary><br>Lumen isn't code-signed (that costs money every year). The warning is the standard one for any unsigned app — see <a href="#first-launch">First launch</a>.</details>
 
-<details><summary><b>Torrent sources don't play</b></summary><br>Torrent sources need the free Stremio Service (a streaming server) running on your PC or network. Point Lumen at it in Settings → Playback → Streaming server.</details>
 
 <details><summary><b>How do I report a bug or ask for a feature?</b></summary><br><a href="https://github.com/benderjohn513-cpu/Lumen/issues/new/choose">Open an issue</a>. For bugs, say which device and version you're on and what you did right before it happened.</details>
 
