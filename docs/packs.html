@@ -35,7 +35,7 @@
 <main>
   <a class="logo" href="./"><i></i>LUMEN</a>
   <small>Community</small><h1>Add-on packs</h1>
-  <p>A pack installs a whole set of add-ons in one go. These were shared by Lumen users. Packs never carry anyone's keys: if one needs Real-Debrid, Lumen asks for yours when you install.</p>
+  <p>A pack installs a whole set of add-ons in one go. These were shared by Lumen users. Packs never carry anyone's keys: if one needs Real-Debrid or TorBox, Lumen asks for yours when you install.</p>
   <div class="btns" style="margin:0 0 22px"><a class="btn acc" href="#share" id="sh">Share your own pack</a><a class="btn ghost" href="./#download">Get Lumen</a></div>
   <div id="list"><p>Loading…</p></div>
   <h2 id="share">Share your own</h2>
@@ -48,7 +48,7 @@
   try {
     const ps = (await (await fetch('packs.json?t=' + Date.now())).json()).packs || [];
     ps.sort((x, y) => (y.official ? 1 : 0) - (x.official ? 1 : 0));
-    el.innerHTML = ps.length ? ps.map(p => `<div class="pk${p.official ? ' off' : ''}"><div><b>${esc(p.name)}</b>${p.official ? '<span class="tag of">Official</span>' : ''}<span class="tag">${p.free ? 'Free' : 'Real-Debrid'}</span>
+    el.innerHTML = ps.length ? ps.map(p => `<div class="pk${p.official ? ' off' : ''}"><div><b>${esc(p.name)}</b>${p.official ? '<span class="tag of">Official</span>' : ''}<span class="tag">${p.free ? 'Free' : p.debrid ? 'Real-Debrid or TorBox' : 'Real-Debrid'}</span>
       <small>${[p.by && 'by ' + esc(p.by), (p.count || 0) + ' add-ons'].filter(Boolean).join(' · ')}</small>${p.about ? `<p>${esc(p.about)}</p>` : ''}</div>
       <a class="btn ghost" href="${esc(p.link)}">View</a></div>`).join('') : '<p>No packs yet. Be the first!</p>';
   } catch { el.innerHTML = '<p class="err">Couldn’t load the packs.</p>'; }

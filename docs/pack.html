@@ -45,12 +45,12 @@
     if (d[0] === '1') bytes = new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
     const p = JSON.parse(new TextDecoder().decode(bytes));
     if (p.lumenPack !== 1 || !Array.isArray(p.addons)) throw new Error('This isn’t a Lumen add-on pack.');
-    const tag = e => e.svc ? 'Set up for you with your Real-Debrid' : e.need?.length ? 'Uses your Real-Debrid' : e.p2p ? 'Free · torrents' : e.sports ? 'Sports' : 'Free';
+    const tag = e => e.svc ? (p.debrid ? 'Set up for you with your debrid key' : 'Set up for you with your Real-Debrid') : e.need?.length ? (p.debrid ? (e.alt?.torbox ? 'Real-Debrid or TorBox' : 'Real-Debrid only') : 'Uses your Real-Debrid') : e.p2p ? 'Free · torrents' : e.sports ? 'Sports' : 'Free';
     out.innerHTML = `<small>Add-on pack${p.by ? ' · by ' + esc(p.by) : ''}</small><h1>${esc(p.name || 'Add-on pack')}</h1>
       ${p.about ? `<p>${esc(p.about)}</p>` : ''}${p.warn ? `<div class="warn">⚠ ${esc(p.warn)}</div>` : ''}
       <h2>${p.addons.length} add-ons</h2><ul>${p.addons.map(e => `<li>${esc(e.n)}<span>${tag(e)}</span></li>`).join('')}</ul>
       ${p.setup?.length ? `<h2>Set up with your own account</h2><ul>${p.setup.map(x => `<li>${esc(x.n)}<span>after installing</span></li>`).join('')}</ul>` : ''}
-      ${p.needs?.includes('realdebrid') ? '<p class="small">Lumen asks for your own Real-Debrid key when you install. It goes into your add-ons on your device and nowhere else.</p>' : ''}
+      ${p.debrid ? '<p class="small">Works with <b>Real-Debrid, TorBox or both</b>. Lumen asks for your own key(s) when you install. They go into your add-ons on your device and nowhere else.</p>' : p.needs?.includes('realdebrid') ? '<p class="small">Lumen asks for your own Real-Debrid key when you install. It goes into your add-ons on your device and nowhere else.</p>' : ''}
       <div class="btns"><a class="btn acc" href="lumen://pack/${d}">Open in Lumen</a><button class="btn ghost" id="copy">Copy link</button><a class="btn ghost" href="packs.html">More packs</a><a class="btn ghost" href="./#download">Get Lumen</a></div>
       <p class="small" style="margin-top:14px">Nothing happens when you click Open? Copy the link and paste it into Lumen under <b>Add-ons → Packs</b>. Lumen doesn't make, host or check third-party add-ons — only install packs you trust.</p>`;
     document.getElementById('copy').onclick = async e => { try { await navigator.clipboard.writeText(location.href); e.target.textContent = 'Copied'; } catch { prompt('Copy this link:', location.href); } };

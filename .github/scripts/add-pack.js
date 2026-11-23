@@ -17,6 +17,6 @@ const g = JSON.parse(fs.readFileSync('docs/packs.json', 'utf8'));
 const page = `https://${process.env.GITHUB_REPOSITORY.split('/')[0].toLowerCase()}.github.io/${process.env.GITHUB_REPOSITORY.split('/')[1]}/pack#${d}`;
 g.packs = g.packs.filter(x => x.issue !== +process.env.ISSUE);
 g.packs.unshift({ name: clip(field('Pack name') || p.name, 60), by: clip(field('Your name or alias') || p.by, 40), about: clip(field("What it's for") || p.about, 200),
-  free: !!p.free, count: p.addons.length, link: page, issue: +process.env.ISSUE, added: new Date().toISOString().slice(0, 10) });
+  free: !!p.free, ...(p.debrid ? { debrid: p.debrid } : {}), count: p.addons.length, link: page, issue: +process.env.ISSUE, added: new Date().toISOString().slice(0, 10) });
 fs.writeFileSync('docs/packs.json', JSON.stringify(g, null, 2) + '\n');
 console.log('Added', g.packs[0].name);
