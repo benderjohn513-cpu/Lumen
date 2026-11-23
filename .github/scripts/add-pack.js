@@ -2,7 +2,8 @@
 const fs = require('fs'), zlib = require('zlib');
 const body = process.env.BODY || '';
 const field = h => { const m = body.match(new RegExp(`### ${h}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`)); const v = m ? m[1].replace(/```\w*/g, '').trim() : ''; return v === '_No response_' ? '' : v; };
-const link = field('Pack link').split(/\s+/)[0];
+// take the pack link wherever it sits in the field (people paste it with quotes, backticks or extra text around it)
+const link = (field('Pack link').match(/lumen:\/\/pack\/?[A-Za-z0-9_-]+|https?:\/\/\S+?#[A-Za-z0-9_-]{8,}/i) || [''])[0];
 const d = (link.match(/^lumen:\/\/pack\/?([A-Za-z0-9_-]+)/i) || link.match(/#([A-Za-z0-9_-]{8,})$/) || [])[1];
 if (!d) throw new Error('No pack link');
 let bytes = Buffer.from(d.slice(1), 'base64url'); if (d[0] === '1') bytes = zlib.inflateRawSync(bytes);
