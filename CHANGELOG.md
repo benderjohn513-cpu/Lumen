@@ -2,6 +2,14 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 23, 2026
+
+**New**
+- **Every version of a title** — when sources have more than one version, pick it under Play or switch in the player and keep your place: black & white or colour, theatrical, extended or director's cut, IMAX or widescreen, and the original 4:3 for shows. A show's pick covers every episode.
+- **Episode orders** — The Melancholy of Haruhi Suzumiya in broadcast or chronological order, Kaleidoscope in story order or shuffled (always starting with Black and ending with White), and anthologies like Love, Death & Robots shuffled. Next episode follows the order you picked.
+- **Story order for anime franchises** — Steins;Gate (including 23β and Steins;Gate 0 in the right spot) and Kara no Kyoukai in the order the story happens (computer apps).
+- **Commentary tracks stay off** — Lumen never picks a commentary audio track for you; it's still there in the audio menu (computer apps).
+
 ## November 22, 2026
 
 **New**
