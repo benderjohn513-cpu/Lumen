@@ -1,6 +1,6 @@
 /* Tap a screenshot to see it full size. Arrows / swipe to move between them, Esc / tap outside / swipe down to close. */
 (() => {
-  const imgs = [...document.querySelectorAll('.shot img, .art img')];
+  const imgs = [...document.querySelectorAll('.shot img, .art img, .gl img')];
   if (!imgs.length) return;
   const box = document.createElement('div');
   box.className = 'lb'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Screenshot');
