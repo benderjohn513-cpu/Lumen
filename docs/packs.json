@@ -1,14 +1,24 @@
 {
- "packs": [
-  {
-   "link": "https://benderjohn513-cpu.github.io/Lumen/pack#1dZA9awMxDIb_itDsXCjZvIV2a0sL6VYy6M66xk0sHWf5Qgj578X56BDIZl6ZR3reI-5KYvmkbov-yaFQYvT4VkNYGY3GIzpsD7cQHVKrxdDj14ahpRy7DDzxeFBhEOaQPSSdIgNJgLzRPUTp1cGg2XjM57gjo53-ZAckMbG7_C2tRdtxbmAZAhy0jKB7gWwjU4ryAxTCTCWDCpgODTrsR2b0NhZ2eF6O_nvtkEJQqe8jCnp8jsKJjdBhQY8bsyH7-XxazLrrpKlLUhN1nkhiz9ma36yCJ3chVNn3s9ULGbWUud6ocke0FNqGd_2muoam0_SAt6za8BotlzvEuZDZtk6uR_VFHlA-BpbVrTWYFncoHVj-S51Ni4eSa4eZrQy1vNMf",
-   "lumen": "lumen://pack/1dZA9awMxDIb_itDsXCjZvIV2a0sL6VYy6M66xk0sHWf5Qgj578X56BDIZl6ZR3reI-5KYvmkbov-yaFQYvT4VkNYGY3GIzpsD7cQHVKrxdDj14ahpRy7DDzxeFBhEOaQPSSdIgNJgLzRPUTp1cGg2XjM57gjo53-ZAckMbG7_C2tRdtxbmAZAhy0jKB7gWwjU4ryAxTCTCWDCpgODTrsR2b0NhZ2eF6O_nvtkEJQqe8jCnp8jsKJjdBhQY8bsyH7-XxazLrrpKlLUhN1nkhiz9ma36yCJ3chVNn3s9ULGbWUud6ocke0FNqGd_2muoam0_SAt6za8BotlzvEuZDZtk6uR_VFHlA-BpbVrTWYFncoHVj-S51Ni4eSa4eZrQy1vNMf",
-   "name": "Lumen Starter",
-   "by": "Lumen",
-   "about": "The basics everyone needs: movie and show info, posters and catalogs, anime, and subtitles. Add your own streaming add-ons on top.",
-   "free": true,
-   "count": 4,
-   "official": true
-  }
- ]
+  "packs": [
+    {
+      "name": "Anime nights",
+      "by": "Arthur Morgan",
+      "about": "Anime info, catalogs and subtitles. A light anime starter you can add your own streaming add-ons to.",
+      "free": true,
+      "count": 2,
+      "link": "https://benderjohn513-cpu.github.io/Lumen/pack#1ZY5La8NADIT_itizH5Tccuu5DS30WHpYx7K9jVdrVlIghPz3rkwe0NykGembObtZI9Kn3x_cFl4qcOQjltG9UogIFMZJ2BW9O61qlkkz7FIePZnsu6TyuA80pArK_B5YapbTjLD34uc0MnjqgbWTIDNyY99DRguTrGjRiD2X9fvHwH2faN3Ojh4Bb0FY7VVNm0QW3ratN68-mNewZIzNoNTGIg_I0vxyInep4Er6WJC-bj3guHnCpXJwL1ofN1dmSP-RVpRRdFlbX_4A",
+      "issue": 1,
+      "added": "2026-11-23"
+    },
+    {
+      "link": "https://benderjohn513-cpu.github.io/Lumen/pack#1dZA9awMxDIb_itDsXCjZvIV2a0sL6VYy6M66xk0sHWf5Qgj578X56BDIZl6ZR3reI-5KYvmkbov-yaFQYvT4VkNYGY3GIzpsD7cQHVKrxdDj14ahpRy7DDzxeFBhEOaQPSSdIgNJgLzRPUTp1cGg2XjM57gjo53-ZAckMbG7_C2tRdtxbmAZAhy0jKB7gWwjU4ryAxTCTCWDCpgODTrsR2b0NhZ2eF6O_nvtkEJQqe8jCnp8jsKJjdBhQY8bsyH7-XxazLrrpKlLUhN1nkhiz9ma36yCJ3chVNn3s9ULGbWUud6ocke0FNqGd_2muoam0_SAt6za8BotlzvEuZDZtk6uR_VFHlA-BpbVrTWYFncoHVj-S51Ni4eSa4eZrQy1vNMf",
+      "lumen": "lumen://pack/1dZA9awMxDIb_itDsXCjZvIV2a0sL6VYy6M66xk0sHWf5Qgj578X56BDIZl6ZR3reI-5KYvmkbov-yaFQYvT4VkNYGY3GIzpsD7cQHVKrxdDj14ahpRy7DDzxeFBhEOaQPSSdIgNJgLzRPUTp1cGg2XjM57gjo53-ZAckMbG7_C2tRdtxbmAZAhy0jKB7gWwjU4ryAxTCTCWDCpgODTrsR2b0NhZ2eF6O_nvtkEJQqe8jCnp8jsKJjdBhQY8bsyH7-XxazLrrpKlLUhN1nkhiz9ma36yCJ3chVNn3s9ULGbWUud6ocke0FNqGd_2muoam0_SAt6za8BotlzvEuZDZtk6uR_VFHlA-BpbVrTWYFncoHVj-S51Ni4eSa4eZrQy1vNMf",
+      "name": "Lumen Starter",
+      "by": "Lumen",
+      "about": "The basics everyone needs: movie and show info, posters and catalogs, anime, and subtitles. Add your own streaming add-ons on top.",
+      "free": true,
+      "count": 4,
+      "official": true
+    }
+  ]
 }
