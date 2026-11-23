@@ -215,5 +215,5 @@ footer a:hover{color:var(--text)}
 .gl img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .gl figcaption{padding:16px 20px 18px;color:var(--muted);font-size:15px;line-height:1.45}
 .gl figcaption b{display:block;color:var(--text);font:600 19px/1.2 var(--display);letter-spacing:-.01em;margin-bottom:4px}
-.g6{grid-column:span 6}
-@media(max-width:900px){.gal{grid-template-columns:1fr}.g6{grid-column:auto}}
+.g6{grid-column:span 6}.g4{grid-column:span 4}
+@media(max-width:900px){.gal{grid-template-columns:1fr}.g6,.g4{grid-column:auto}}
