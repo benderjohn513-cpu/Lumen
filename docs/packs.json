@@ -1,6 +1,16 @@
 {
   "packs": [
     {
+      "name": "Arthur Morgan's free setup",
+      "by": "Arthur Morgan",
+      "about": "The free version of my setup: movies, shows, anime and sports with free torrent sources. No debrid needed (torrents need the streaming engine; a VPN is a good idea).",
+      "free": true,
+      "count": 10,
+      "link": "https://benderjohn513-cpu.github.io/Lumen/pack#1tVVdb9MwFP0rV35hk5yMtaxUQTx0QwJEO5CKeEF7uHFuGtPYDv5oF2D_HTlpxggUxANvlu_xued--iurgyL9DsWWZeecaVTEMrawvgoWVsZuUD9yUFoicORDwzjL2zGCcYa5CZ5l7H1FPXpH1kmjwZSg2v5tBsrsJDkOrjJ7xwG1VASoC3CNsd7BXvqqf-6NtaQ9OBOsIJfCtYGCcisL0EQFFXBygLjuAnxF4LwlVFJvgPRGanoGCB_eXYN0gLAxpgBZEJ6mjLM9Ws0yxjiL7ljmbSDOIpNj2ccbzrAojI7nrywCr6QmRR4ZZ4FlrPK-cdnZ2W6aiIMljd5VKs2ZQi1Lcj795Ixmd7xniJlZxfjhBXrM0REsoo8Ro1dFnlJdVsZ5KlJh1BG-16sXl3CFHmuzcSOS85LmT3LxdDLHMpGqyBNxAKY55m2SE6rQpKIO-RH2RVeaN9K7MOLuipZso-UQchn0EZa3Del1yL30NTnYTUdUpiHtBnOym_4tha-wrs2eSPeJHEc9VOJHsPd81fCyMU2o0R5xcFVZ6bxC988OxPDyzw76BlgSbsfczhOq2A9pQUWruyREcB2xx1qqnwBpxj003D8o0OeAtfRtKWtP9vmT-eOGC1Q8t5ZUuOVOWB70Vpu9_ubkFzrgJhcvL_ns5eVIAGfNpOmHZtCyvp-9Iz35FOeT89lUTB_PKOl0SZNo8mUtb4eEJt3U_bVHbzjrl9EwnV1PxiyInxzOJhcoZhdzEkmP-JVZGF3KTbAUd0IVN9tS6m3cJwZaEyyYvQYUwgTt4WTVdnOxlM5zWJL3ZHNzW3BYaBkvT-9L88M4UoWN7KsSbd14H3Lx36SsFstk3fu43zgPFSmsh3qkO7KC6hSb5r_JWfervu8XN9LSRBlBpZXcVGXdpv53aVmTB-khNA_-i8M_AUbXLZzo4bM4ZXc3d98B",
+      "issue": 3,
+      "added": "2026-11-23"
+    },
+    {
       "name": "Arthur Morgan's full setup",
       "by": "Arthur Morgan",
       "about": "Everything I use: movies, shows, anime and live sports in top quality. Works with Real-Debrid, TorBox or both.",
