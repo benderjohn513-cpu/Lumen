@@ -45,7 +45,7 @@
     if (d[0] === '1') bytes = new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
     const p = JSON.parse(new TextDecoder().decode(bytes));
     if (p.lumenPack !== 1 || !Array.isArray(p.addons)) throw new Error('This isn’t a Lumen add-on pack.');
-    const tag = e => e.svc ? (p.debrid ? 'Set up for you with your debrid key' : 'Set up for you with your Real-Debrid') : e.need?.length ? (p.debrid ? (e.alt?.torbox ? 'Real-Debrid or TorBox' : 'Real-Debrid only') : 'Uses your Real-Debrid') : e.p2p ? 'Free · torrents' : e.sports ? 'Sports' : 'Free';
+    const tag = e => e.svc === 'sportsstreams' ? 'Live sports · Premium with your token, or free' : e.svc ? (p.debrid ? 'Set up for you with your debrid key' : 'Set up for you with your Real-Debrid') : e.need?.length ? (p.debrid ? (e.alt?.torbox ? 'Real-Debrid or TorBox' : 'Real-Debrid only') : 'Uses your Real-Debrid') : e.p2p ? 'Free · torrents' : e.sports ? 'Sports' : 'Free';
     out.innerHTML = `<small>Add-on pack${p.by ? ' · by ' + esc(p.by) : ''}</small><h1>${esc(p.name || 'Add-on pack')}</h1>
       ${p.about ? `<p>${esc(p.about)}</p>` : ''}${p.warn ? `<div class="warn">⚠ ${esc(p.warn)}</div>` : ''}
       <h2>${p.addons.length} add-ons</h2><ul>${p.addons.map(e => `<li>${esc(e.n)}<span>${tag(e)}</span></li>`).join('')}</ul>

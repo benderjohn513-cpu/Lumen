@@ -2,6 +2,12 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 24, 2026
+
+**New**
+- **Live sports in one step** — the Sports tab now sets up **Sports Streams** for you. Paste your Premium token and Lumen checks it, picks the server closest to you, sets your timezone and installs it. No token? Press **Get the free version**, tick “I'm human” on the page that opens, press Install, and Lumen catches it. Then choose your sports: Lumen shows those games and tells Sports Streams to show just those sports. Click any live game and it plays (computers and Android).
+- **Both of Arthur Morgan's packs include live sports** — paste your Sports Streams Premium token in the pack window, or leave it empty for the free version.
+
 ## November 23, 2026
 
 **New**
