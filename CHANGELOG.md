@@ -2,6 +2,17 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 27, 2026 — Lumen 3.1.0
+
+**New**
+- **Update pop-up** — when a new Lumen is out, a pop-up says **Update available** with what's new. **Update now** downloads it and restarts Lumen on Windows, or opens the installer on Android; on Linux it saves the new version to your Downloads. **Later** asks again next time.
+- **Search for "good" ones** — "good horror movies", "great sci-fi shows", "amazing anime": words like good, great and amazing pick well-rated, well-known titles instead of titles with that word in the name. "The Good Place" still finds The Good Place.
+- **Search by what it's about** — "a movie about a shark", "a show about a chemistry teacher who makes drugs", "movies about chess". Lumen reads plot summaries and subjects, and knows similar words (shark → great white, AI → robot).
+- **See why it matched** — every Smart Search result shows what matched your words.
+- **Refine a search** (computers) — type more under a Smart Search to narrow it ("under two hours", "less action", "exclude watched"); each change is a chip you can remove. "Sad and funny" now needs both, and whole sentences work: "could you show me a funny mystery".
+
+Windows, Android and Linux are 3.1.0. Mac stays on the 3.0.0 beta for now.
+
 ## November 24, 2026
 
 **New**

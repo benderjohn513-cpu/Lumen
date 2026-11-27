@@ -20,11 +20,11 @@ Movies, shows, anime, live sports, manga and manhwa in one app, from the add-ons
 
 | Platform | Download | Notes |
 |---|---|---|
-| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Windows-3.0.0.zip) | Unzip and run `Lumen.exe`. mpv is built in. |
-| **Android phones** | [Lumen for Android 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Android-3.0.0-arm64.apk) | `arm64` APK for most phones from the last 8 years. |
+| **Windows 10 / 11** (64-bit) | [Lumen for Windows 3.1.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Windows-3.1.0.zip) | Unzip and run `Lumen.exe`. mpv is built in. |
+| **Android phones** | [Lumen for Android 3.1.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Android-3.1.0-arm64.apk) | `arm64` APK for most phones from the last 8 years. |
 | **Android TV / Google TV** | Same app as phones | `arm64` for most TVs. Older sticks (some Fire TV / Chromecast models) need the `armv7` APK. |
-| **Linux** (64-bit) | [Lumen for Linux 3.0.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Linux-3.0.0-x64.tar.xz) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
-| **Mac** (beta) | [Lumen for Mac 3.0.0 beta](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Mac-3.0.0-beta-arm64.tar.xz) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
+| **Linux** (64-bit) | [Lumen for Linux 3.1.0](https://github.com/benderjohn513-cpu/Lumen/releases/latest/download/Lumen-Linux-3.1.0-x64.tar.xz) | `x64` for most PCs, `arm64` for ARM boards. Extract, run `./lumen`, optionally `./install.sh` for the app menu. Install `mpv` for the best playback. |
+| **Mac** (beta) | [Lumen for Mac 3.0.0 beta](https://github.com/benderjohn513-cpu/Lumen/releases/download/v3.0.0/Lumen-Mac-3.0.0-beta-arm64.tar.xz) | `arm64` for Apple-chip Macs (M1 and newer), `x64` for older Intel Macs. Not yet tested on a real Mac. Tell us if it works! |
 
 Other versions (Android armv7, Linux ARM, Mac with Intel) are on the [Releases page](https://github.com/benderjohn513-cpu/Lumen/releases/latest).
 
