@@ -2,6 +2,21 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 27, 2026 — Lumen 3.2.0
+
+- **Dialogue Boost** — Can’t hear what they’re saying? In the player’s audio menu (Android: the Dialogue Boost chip), pick Light or Strong. Voices come forward, rumble and background noise go back. Lumen remembers your choice.
+- **Watch status** — Put anything on Plan to watch, Watching, Completed, On hold or Dropped, from its page (Status button) or by right-clicking a poster. My List shows a tab for each. Starting something moves it to Watching, and finishing a movie moves it to Completed. Manga and manhwa get the same shelves, including the new On hold.
+- **Simulcast calendar** (Windows and Linux) — Calendar → Simulcasts this week: every new anime episode this week, with a live countdown to each one. Shows you follow are highlighted, and “Shows I follow” hides the rest.
+- **Top 10 in your country, for you** (Windows and Linux) — A new Home row: what people in your country are watching this week, ordered by the genres you watch most. Things you’ve finished are left out.
+- **Clips** (Windows and Linux) — A new Clips tab: trailers for popular movies, shows and anime, one per screen. Scroll or press ↑ ↓ to flip, M for sound, and add anything to My List or a status straight from the clip.
+- **Live preview in Alt+Tab** (Windows) — While a video plays, the Alt+Tab and taskbar previews of Lumen show the video moving, not an empty player.
+- **Tennis tab** (Windows and Linux) — Sports has a Tennis tab with every ATP and WTA match of the day. Inside a match, Lumen also lists the tennis channels from your sports add-ons that may be showing it.
+- **Multi-view: up to 10 games** (Windows and Linux) — Multi-view can show up to 10 streams at once, and each one has its own volume slider.
+- **Quality button** (Windows and Linux) — The player has a Quality button right next to CC: pick 4K, 1080p, 720p and so on, and Lumen switches to the best source at that quality and keeps your place.
+- **Bigger volume slider** (Windows and Linux) — The player’s volume slider is bigger and easier to grab, and still shows the percentage (up to 200% with mpv).
+- **Better “about” searches** (Windows and Linux) — Searches like “a movie about a dog” now also read Wikipedia’s plot summaries inside the app, and titles that only have the word in their name (“The Power of the Dog”) no longer push out the real matches.
+- **Fix** — searching by what a movie is about ("movies about chess") works again inside the app.
+
 ## November 27, 2026 — Lumen 3.1.0
 
 **New**
