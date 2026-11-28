@@ -2,6 +2,12 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 28, 2026 — Lumen 3.2.2
+
+- **No more empty searches.** When a search finds nothing, or only loose matches, Lumen asks Claude, which also fixes spelling.
+- **Describing a show works better**, e.g. "that one cartoon with the talking dog solving mysteries" finds Scooby-Doo.
+- **AI search no longer stops working after a while.**
+
 ## November 27, 2026 — Lumen 3.2.1
 
 - **AI search** — Describe something you half-remember: “that movie where a soldier keeps dying and waking up on the same day”, “the show with the guy who sells meth”. Lumen asks Claude for ideas and checks every title against its catalogs, so only real titles show up, marked “AI pick”. Only your search text is sent. Switch it off in Settings → Search.
