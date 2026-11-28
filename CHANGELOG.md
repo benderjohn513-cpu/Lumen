@@ -2,6 +2,14 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 27, 2026 — Lumen 3.2.1
+
+- **AI search** — Describe something you half-remember: “that movie where a soldier keeps dying and waking up on the same day”, “the show with the guy who sells meth”. Lumen asks Claude for ideas and checks every title against its catalogs, so only real titles show up, marked “AI pick”. Only your search text is sent. Switch it off in Settings → Search.
+- **More search results** — Searches now show at least 20 results unless what you asked for is very specific. A title search adds “More like …” underneath, and Claude’s picks fill in the rest, always matched to what you searched.
+- **Sports streams start fast** — Lumen now finds sports streams its own way: it skips locked “upgrade” placeholders and ads, checks the best streams at the same time and plays the best picture that answers fastest. If one drops, it moves to the next working stream. A stream that is playing never shows a “couldn’t play” card.
+- **Finds the right game** — Better at finding the exact game in your sports add-ons: teams in either order, short names, college teams, dates, tournaments, races and fight cards. A game’s window lists its match streams and, separately, channels that may be showing it.
+- **Channels play in one tap** (Windows and Linux) — In Sports, picking a channel from your sports add-ons starts it straight away.
+
 ## November 27, 2026 — Lumen 3.2.0
 
 - **Dialogue Boost** — Can’t hear what they’re saying? In the player’s audio menu (Android: the Dialogue Boost chip), pick Light or Strong. Voices come forward, rumble and background noise go back. Lumen remembers your choice.
