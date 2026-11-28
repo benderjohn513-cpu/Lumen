@@ -2,6 +2,11 @@
 
 Lumen also shows these notes inside the app, with screenshots, short clips and **Try it** buttons that take you straight to each feature.
 
+## November 28, 2026 — Lumen 3.2.3
+
+- **Simulcast calendar on Android:** My List → Upcoming → Simulcasts this week, with countdowns and the shows you follow highlighted.
+- **Top 10 in your country on Android:** a new Home row with what people in your country are watching this week.
+
 ## November 28, 2026 — Lumen 3.2.2
 
 - **No more empty searches.** When a search finds nothing, or only loose matches, Lumen asks Claude, which also fixes spelling.
